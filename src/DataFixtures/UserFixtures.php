@@ -12,8 +12,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
-        $UserRepo = $manager->getRepository(User::class);
-        for($index = 0; $index < 5000; $index++){
+        for($index = 0; $index < 100; $index++){
             $user = new User();
             $user->setEmail($index . "-email@email.com");
             $manager->persist($user);
