@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BaseController!{% endblock %}
+
+
+{% block body %}
+
+    <div class="wrapper__main">
+
+        <div>
+            Total Users count: {{ userCollection|length }}
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+
+                    <th>
+                        Email
+                    </th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                {% for user in userCollection %}
+
+                    <tr>
+                        <td>
+                            {{ user.id }}
+                        </td>
+
+                        <td>
+                            {{ user.email }}
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block xpto %}
+{% endblock %}
