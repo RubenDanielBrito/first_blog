@@ -1,0 +1,13 @@
+@import "../variables";
+
+.navigation {
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  &__main {
+    top: 0;
+    height: $navigation_height;
+    background: red;
+  }
+}
